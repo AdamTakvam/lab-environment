@@ -34,7 +34,7 @@ function devinfo
 
   DEVPATH=`find /sys/devices -name $DEVICE -printf '%P\n' | grep -v virtual`
   VDEVPATH=`find /sys/devices -name $DEVICE -printf '%P\n' | grep virtual | grep -v slaves`
-  LVMTYPE=`lvdisplay | grep -m 1 " $DEVICE$" | cut -d ' ' -f 3`
+  LVMTYPE=`sudo lvdisplay | grep -m 1 " $DEVICE$" | cut -d ' ' -f 3`
 
   if [ "$LVMTYPE" ]; then
     echo "Type: Logical (LVM)"
@@ -60,8 +60,14 @@ function devinfo
         echo "Type: Physical (Partition)"
         echo "Path: $DEVPATH"
 
-        if [ "`pvdisplay | grep /dev/$DEVICE`" ]; then
-          pvdisplay /dev/$DEVICE
+        if [ "`sudo pvdisplay | grep /dev/$DEVICE`" ]; then
+          sudo pvdisplay /dev/$DEVICE
+        fi
+
+        if [ "`sudo zpool status 2> /dev/null | grep " $DEVICE"`" ]; then
+          echo
+          echo "ZFS Information:"
+          sudo zpool status
         fi
       else
         echo "Type: Physical"
