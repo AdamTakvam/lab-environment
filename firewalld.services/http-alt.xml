@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>HTTP (Alternate)</short>
+  <description>HTTP is the protocol used to serve Web pages. The alternate port, 8080, is often used when the primary port, 80, is in use by something else.</description> 
+  <port protocol="tcp" port="8080"/>
+</service>

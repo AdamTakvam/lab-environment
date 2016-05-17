@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Munin Node</short>
+  <description>Allows incoming connections from a Munin Master.</description>
+  <port protocol="tcp" port="4949"/>
+</service>

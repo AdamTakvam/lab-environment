@@ -1,0 +1,5 @@
+[user]
+        name = Adam Takvam
+        email = adam@swiftstack.com
+[core]
+        editor = vim

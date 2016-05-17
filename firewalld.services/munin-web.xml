@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Munin Web Host</short>
+  <description>Allows incoming connections to the web portal hosted on a Munin Master.</description>
+  <port protocol="tcp" port="4948"/>
+</service>

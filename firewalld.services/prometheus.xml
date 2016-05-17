@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Prometheus Server</short>
+  <description>Exposes the web interface for Prometheus Server (a metrics and trending tool).</description>
+  <port protocol="tcp" port="9090"/>
+</service>

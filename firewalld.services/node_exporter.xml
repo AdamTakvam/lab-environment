@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Node Exporter</short>
+  <description>Allows incoming connections from a Prometheus Server to gather metrics from the "node exporter" agent.</description>
+  <port protocol="tcp" port="9100"/>
+</service>

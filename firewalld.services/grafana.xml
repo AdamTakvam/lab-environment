@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<service>
+  <short>Grafana</short>
+  <description>Exposes the web interface for Grafana (a data visualization tool).</description>
+  <port protocol="tcp" port="3000"/>
+</service>
